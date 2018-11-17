@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/testrepo/testJS/testJS
+    working_directory: ~/testrepo/
     docker:
       - image: circleci/python:3.6.4
         environment:
@@ -14,4 +14,4 @@ jobs:
             pipenv install
       - run:
           command: |
-            pipenv run "python manage.py test"
+            pipenv run "python testJS/testJS/manage.py test"
