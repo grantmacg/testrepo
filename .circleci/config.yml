@@ -1,0 +1,17 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/testrepo
+    docker:
+      - image: circleci/python:3.6.4
+        environment:
+          PIPENV_VENV_IN_PROJECT: true
+    steps:
+      - checkout
+      - run:
+          command: |
+            sudo pip install pipenv
+            pipenv install
+      - run:
+          command: |
+            pipenv run "python manage.py test"
