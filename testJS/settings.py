@@ -54,7 +54,7 @@ ROOT_URLCONF = 'testJS.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['button\\templates'],
+        'DIRS': ['button/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
