@@ -14,8 +14,7 @@ class ButtonTest(StaticLiveServerTestCase):
 		driver.get("%s%s" % (self.live_server_url, "/button/"))
 		print(driver.page_source.encode("utf-8"))
 		driver.find_element_by_id("greeting").click()
-		elem = driver.find_element_by_id("showit")
-		assert "...world!" in elem
+		assert "...world!" in driver.find_element_by_id("showit").text
 		
 	def tearDown(self):
 		self.driver.close()
