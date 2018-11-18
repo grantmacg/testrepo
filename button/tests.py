@@ -11,6 +11,7 @@ class ButtonTest(TestCase):
 	def test_button(self):
 		driver = self.driver
 		driver.get("http://localhost:8000/button/")
+		print driver.page_source.encode("utf-8")
 		driver.find_element_by_id("greeting").click()
 		elem = driver.find_element_by_id("showit")
 		assert "...world!" in elem
