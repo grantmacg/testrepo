@@ -9,6 +9,6 @@ name = "pypi"
 
 dj-database-url = "*"
 django = "*"
-
+selenium = "*"
 
 [dev-packages]
