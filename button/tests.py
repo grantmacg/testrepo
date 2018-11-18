@@ -12,7 +12,6 @@ class ButtonTest(StaticLiveServerTestCase):
 	def test_button(self):
 		driver = self.driver
 		driver.get("%s%s" % (self.live_server_url, "/button/"))
-		print(driver.page_source.encode("utf-8"))
 		driver.find_element_by_id("greeting").click()
 		assert "...world!" in driver.find_element_by_id("showit").text
 		
