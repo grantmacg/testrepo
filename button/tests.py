@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 class ButtonTest(TestCase):
 
 	def setUp(self):
-        self.driver = webdriver.Firefox()
+		self.driver = webdriver.Firefox()
 		
 	def test_button(self):
 		driver = self.driver
